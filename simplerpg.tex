@@ -1,0 +1,267 @@
+\documentclass[11pt]{article}
+\title{\textbf{David's Role-Playing System\\
+Core Rules}}
+\author{Designer: David J. Setser\\
+Editor: Dharma Bellamkonda}
+\date{}
+\usepackage{multirow}
+\usepackage[bookmarks]{hyperref}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This document describes a system for tabletop role-playing games designed to be adaptable to any setting.
+
+\section{Skills}
+In this role-playing system, all actions (including combat actions) are based on \textbf{skills}.
+\footnote{The list of skills available to characters is defined by the setting rules and the game master.}
+A skill is a quantitative measure of how well a character can perform tasks that require the use of that skill.
+Each skill consists of an associated \textbf{ability}, an \textbf{education bonus}, a \textbf{talent bonus}, any \textbf{conditional modifiers} and any \textbf{trait modifiers}.
+
+When a character uses a skill to attempt a task, the controlling player (or game master) performs a \textbf{skill check} to determine whether the character succeeds or fails.
+The player rolls two six-sided dice and adds their character's skill bonuses and modifiers to the outcome of the dice roll.
+\footnote{Critical successes and/or critical failures can be optionally implemented by the setting rules or game master.
+A critical success can be represented by applying a +6 conditional modifier when a player rolls "sixes" (two sixes).
+A critical failure can be represented by applying a -6 conditional modifier when a player rolls "snake eyes" (two ones).}
+The character succeeds if the total skill check is higher than the skill check target's \textbf{opposed skill check} or the skill check's \textbf{difficulty check}.
+\footnote{Players always win ties against non-player characters or difficulty checks.} Otherwise, the character fails the task.
+
+Opposed skill checks are used when the use of a skill involves competing against or targeting an animate character that is non-compliant or resisting.
+The target rolls their own skill check of an appropriate action.
+If the offensive character's total skill check is higher than the defensive character's total skill check, the offensive character succeeds.
+If the defensive character's total skill check is higher than the offensive character's total skill check, the offensive character fails.
+
+Difficulty checks are used whenever opposed rolls are not applicable to the situation.
+The game master decides on a number that represents how difficult the skill check should be.
+If the player's total skill check is higher than the difficult check, the character succeeds.
+Otherwise, the character fails the task.
+
+\subsection{Ability}
+\textbf{Ability bonuses} are six quantitative scores that describe a character's natural abilities in broad areas.
+Each ability is associated with several related skills. An ability bonus of 0 is an average human, while an ability bonus of 6 is highly exceptional.
+Ability bonuses may be negative, indicating below-average ability in that area.\
+footnote{The ability bonus distribution for player characters and the associated ability for each skill is defined by the setting rules and the game master.}
+
+\begin{description}
+	\item[Strength]Muscular strength.
+	\item[Dexterity]Agility, reflexes, balance, and fine motor skills.
+	\item[Constitution]Physical health and hardiness.
+	\item[Intelligence]Learning and reasoning skills.
+	\item[Wisdom]Awareness, intuition and common sense.
+	\item[Charisma]Personality and ability to influence others.
+\end{description}
+
+\subsection{Education}
+Each skill has an \textbf{education bonus}.
+This is a quantitative measure of a character's formal training and study in a particular skill.
+Education bonuses range from 0 to 12.
+
+\begin{center}
+	\begin{tabular}{cll}
+		Bonus & Skill Level & Real World Equivalent  \\
+		\hline
+		0     & Unskilled   & No Education           \\
+		2     & Beginner    & Some School            \\
+		4     & Novice      & High School            \\
+		6     & Apprentice  & Associate's Degree     \\
+		8     & Master      & Bachelor's Degree      \\
+		10    & Specialist  & Master's Degree        \\
+		12    & Expert      & Doctoral Degree        \\
+	\end{tabular}
+\end{center}
+
+Education bonuses are defined at character creation based on the character's previous training and education.
+It is up to the individual setting rules and the game master to determine reasonable education bonuses for characters.
+Education bonuses generally do not change after character creation unless the character undergoes additional education.
+
+\subsection{Talent}
+Each skill has a \textbf{talent bonus}
+This is a quantitative measure of a character's experience and practice at a skill
+Talents can be increased by spending \textbf{talent points}, which are the primary means by which characters increase in power.
+Talent points are rewarded by the game master at game milestones such as completing a quest, advancing the story, or simply at the end of each play session.
+
+Players may immediately spend a talent point to increase a single skill's talent bonus by 1.
+The skill must have been used by the character at least once since the last time a talent point was spent, and a player can not increase the same skill's talent bonus consecutively (i.e twice or more in a row).
+
+\subsection{Conditional Modifier}
+The circumstances of a situation may have a positive or negative effect on your character's skills.
+These are quantitatively represented by \textbf{conditional modifiers}.
+\footnote{Conditional modifiers are defined and applied by the setting rules and the game master.}
+Examples of conditional modifiers include:
+
+\begin{itemize}
+	\item A character wears set of heavy armor, applying a +2 conditional modifier to their defenses against weapons but also applying a -4 conditional modifier to skills involving physical exertion due to deceased mobility and extra weight.
+	\item A character fires an arrow from atop a wall at an enemy below, applying a +2 conditional modifier to the attack due to the height difference.
+	\item A character fails an opposed roll against another character's intimidation, applying a -1 conditional modifier to all actions on their next turn due to shaken nerves.
+	\item A player thinks of an unexpected solution to a problem, granting a +2 conditional modifier to their attempt to execute the solution as a reward for player creativity.
+\end{itemize}
+
+\subsection{Traits}
+\textbf{Traits} represent special or unusual ways a character uses their skills.
+\footnote{Traits are defined by the setting rules and the game master and are assigned to characters by the game master based on character backgrounds and development.}
+Traits are rarely purely negative, but may include both positive and negative aspects.
+Examples of traits include:
+
+\begin{description}
+	\item[Polar Explorer]You spent time exploring a polar region and are experienced at surviving in cold conditions. Gain a +2 trait modifier to Survival checks against cold conditions.
+	\item[Tinkerer]As a hobbyist you love seeing how things work. You may dissemble a mechanical object to understand its internal functions. However, you must pass a Crafting check to correctly reassemble the item.
+	\item[Photosensitive]Your eyes are extra sensitive to light. Gain a +2 trait modifier to perception checks in low-light and dark environments, but gain a -1 trait modifier in bright environments.
+	\item[Optimism]You try to make the best out of terrible situations. If any non-combat skill check results in a failure, you may choose to repeat the roll. You must accept the new result.
+\end{description}
+
+\section{Combat}
+For combat and other similar situations, an additional set of rules is implemented to manage the order and timing of actions and defeat conditions.
+
+\subsection{Condition}
+A character's ability to function and act is represented by \textbf{condition}.
+The core rules specify two condition types, \textbf{health} and \textbf{fatigue}.
+Healthy characters start at the normal level of their condition.
+As a character becomes progressively more injured or tired in a fight, their appropriate condition level is reduced and they incur negative conditional modifiers to all skill checks.
+If any condition is reduced to the lowest level, the character becomes unable to act.
+Characters can reverse a reduced condition level by finding in-game means of healing and rest.
+
+The relative power tier of different characters is represented by the number of levels on their condition tracks.
+More powerful characters have more condition levels and are more difficult to defeat.
+\footnote{Setting player characters at the Heroic tier is recommended, but they may be set at any tier appropriate to the setting and intended difficulty.}
+
+\begin{center}
+	\begin{tabular}{|c|ll|ll|}
+		\multicolumn{1}{c}{Tier} & \multicolumn{2}{c}{Health} & \multicolumn{2}{c}{Fatigue}\\
+		\hline
+		\multirow{8}{*}{Epic}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Bruised  & -1 Conditional Modifier & Drained       & -1 Conditional Modifier \\
+		 & Battered & -2 Conditional Modifier & Weary         & -2 Conditional Modifier \\
+		 & Beaten   & -2 Conditional Modifier & Fatigued      & -2 Conditional Modifier \\
+		 & Injured  & -4 Conditional Modifier & Weakened      & -4 Conditional Modifier \\
+		 & Wounded  & -4 Conditional Modifier & Exhausted     & -4 Conditional Modifier \\
+		 & Bloodied & -8 Conditional Modifier & Depleted      & -8 Conditional Modifier \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+		\multirow{7}{*}{Legendary}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Bruised  & -1 Conditional Modifier & Drained       & -1 Conditional Modifier \\
+		 & Beaten   & -2 Conditional Modifier & Fatigued      & -2 Conditional Modifier \\
+		 & Injured  & -4 Conditional Modifier & Weakened      & -4 Conditional Modifier      \\
+		 & Wounded  & -4 Conditional Modifier & Exhausted     & -4 Conditional Modifier \\
+		 & Bloodied & -8 Conditional Modifier & Depleted      & -8 Conditional Modifier \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+		\multirow{6}{*}{Heroic}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Bruised  & -1 Conditional Modifier & Drained       & -1 Conditional Modifier \\
+		 & Beaten   & -2 Conditional Modifier & Fatigued      & -2 Conditional Modifier \\
+		 & Wounded  & -4 Conditional Modifier & Exhausted     & -4 Conditional Modifier \\
+		 & Bloodied & -8 Conditional Modifier & Depleted      & -8 Conditional Modifier \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+		\multirow{5}{*}{Elite}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Beaten   & -2 Conditional Modifier & Fatigued      & -2 Conditional Modifier \\
+		 & Wounded  & -4 Conditional Modifier & Exhausted     & -4 Conditional Modifier \\
+		 & Bloodied & -8 Conditional Modifier & Depleted      & -8 Conditional Modifier \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+		\multirow{4}{*}{Veteran}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Wounded  & -4 Conditional Modifier & Exhausted     & -4 Conditional Modifier \\
+		 & Bloodied & -8 Conditional Modifier & Depleted      & -8 Conditional Modifier \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+		\multirow{3}{*}{Common}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Wounded  & -4 Conditional Modifier & Exhausted     & -4 Conditional Modifier \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+		\multirow{2}{*}{Weak}
+		 & Normal   & No Penalty              & Normal        & No Penalty              \\
+		 & Dying    & Cannot Act              & Incapacitated & Cannot Act              \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Advantage}
+\textbf{Advantage} is a relationship between two characters in combat where one is in a temporary superior state to the other.
+Advantage is a one-way relationship; if a player gains advantage over a character, that character loses any advantage they had against that player.
+A character may gain advantage over another in one of three ways.
+
+\begin{itemize}
+	\item The character successfully attacked the other and the other has not successfully attacked the character since then.
+	\item At the start of their phase or action, the character is in a situation that grants advantage over the other (such as flanking the other or being on higher ground).
+	\item The character performs a critical defense, immediately granting advantage to the defending character.
+\end{itemize}
+
+Advantage is a prerequisite condition for damaging an opponent and is carried over between phases.
+
+\subsection{Phase and Action Order}
+Combat is divided into \textbf{phases} during which all members of a side each perform \textbf{actions}.
+Typically, this means that all players perform their actions during the players' phase, then all enemy characters perform their actions during the enemy phase.
+
+Within a phase, the characters can perform their actions in any order they choose.
+If the players do not have a preference for action order, they can simply take turns going around the table clockwise.
+
+The side that acts first is determined by the role playing situation, such as which side takes the other by surprise.
+If multiple sides start at the same time, the phase order can be decided by rolling one six-sided die for each side and going in order from highest roll to lowest.
+Players always win ties against non-player characters.
+
+\subsection{Actions}
+An \textbf{action} is anything the character can do in approximately three seconds.
+This might include attacking with a weapon, casting a spell, moving through the environment, or manipulating an object.
+Actions are resolved with skill checks just as in non-combat situations.
+
+During their side's phase, each character may choose to perform at least up to two sequential actions.
+They may choose to take more actions by \textbf{multitasking} and/or \textbf{rushing}.
+Multitasking allows a character to perform two simultaneous actions in place of a single action.
+Multitasking applies a negative conditional modifier to both actions.
+Rushing allows a character to perform three actions during a single phase with a negative conditional modifier on all three actions.
+Both multitasking and rushing increase the consequences of failing an action.
+Multitasking and rushing can be combined, but the negative conditional modifiers stack at an increasing rate.
+
+\subsubsection{Movement}
+The following table is a guideline of how far a character can move in a single action.
+
+\begin{center}
+	\begin{tabular}{lccc}
+		Speed  & Feet & Squares & Hexes \\
+		\hline
+		Walk   & 30   & 6       & 6     \\
+		Run    & 60   & 12      & 12    \\
+		Sprint & 90   & 18      & 18    \\
+	\end{tabular}
+\end{center}
+
+This speeds listed in the table can be modified by traits or conditional modifiers.
+For example, a character carrying a heavy item may move more slowly, while a character who goes running every day may have a trait that allows them to move faster.
+
+Different movement speeds apply different conditional modifiers to skills used later in the phase at the game master's discretion.
+For example, sprinting before pushing a heavy object might incur a negative conditional modifier on the push action, while sprinting before jumping across a gap might grant a positive conditional modifier on the jump action.
+Repeatedly sprinting might wear a character down, applying a negative conditional modifier on all their actions until they stop to rest.
+
+\subsubsection{Attacking and Defending}
+When a character attacks another character (whether it be with melee weapon, ranged weapon or magic-like ability) they use the associated attack skill to make an opposed skill check against their target.
+The target uses an appropriate defense skill to oppose.
+If the attack skill check succeeds, one of two results may occur.
+
+\begin{itemize}
+	\item If the attacker does not already have advantage over the defender, they gain advantage.
+	\item If the attacker has advantage over the defender, the defender reduces the appropriate  condition track by one.
+\end{itemize}
+
+When the difference between the attacker's attack skill check and the defender's defense skill check is greater than 10 in favor of either character, a \textbf{combat critical} occurs.
+The results of a combat critical are in addition to any normal results of the outcome.
+
+\begin{itemize}
+	\item If the combat critical is in favor of the attacker, they perform a \textbf{critical attack} and the defender goes down one more level on the condition track.
+	\item If the combat critical is in favor of the defender, they perform a \textbf{critical defense} and immediately gain advantage over the attacker.
+\end{itemize}
+
+An attacker can choose to move up to 5 feet (one square or one hex) as part of their attack action.
+
+\subsubsection{Prepared Actions}
+A character can choose to execute an action during another side's phase by declaring a \textbf{prepared action}.
+A character must forfeit one of their actions during their own side's phase in order to prepare an action.
+The character's controlling player must specifically state what action the character will perform.
+They may then execute that action at any time before their next phase.
+
+\end{document}
