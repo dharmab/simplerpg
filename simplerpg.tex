@@ -39,9 +39,9 @@ Otherwise, the character fails the task.
 
 \subsection{Ability}
 \textbf{Ability bonuses} are six quantitative scores that describe a character's natural abilities in broad areas.
-Each ability is associated with several related skills. An ability bonus of 0 is an average human, while an ability bonus of 6 is highly exceptional.
+Each ability is associated with several related skills. An ability bonus of 0 is an average human, while an ability bonus of 6 represents the highest ability score a human can have without supernatural or technological enhancement.
 Ability bonuses may be negative, indicating below-average ability in that area.\
-footnote{The ability bonus distribution for player characters and the associated ability for each skill is defined by the setting rules and the game master.}
+\footnote{The ability bonus distribution for player characters and the associated ability for each skill is defined by the setting rules and the game master.}
 
 \begin{description}
 	\item[Strength]Muscular strength.
@@ -73,7 +73,7 @@ Education bonuses range from 0 to 12.
 
 Education bonuses are defined at character creation based on the character's previous training and education.
 It is up to the individual setting rules and the game master to determine reasonable education bonuses for characters.
-Education bonuses generally do not change after character creation unless the character undergoes additional education.
+Education bonuses generally do not change after character creation unless the character undergoes additional education, as an event within the roleplaying.
 
 \subsection{Talent}
 Each skill has a \textbf{talent bonus}
@@ -83,6 +83,7 @@ Talent points are rewarded by the game master at game milestones such as complet
 
 Players may immediately spend a talent point to increase a single skill's talent bonus by 1.
 The skill must have been used by the character at least once since the last time a talent point was spent, and a player can not increase the same skill's talent bonus consecutively (i.e twice or more in a row).
+%TODO: Work more on how talents progress to prevent/discourage excessive powergaming.
 
 \subsection{Conditional Modifier}
 The circumstances of a situation may have a positive or negative effect on your character's skills.
@@ -96,6 +97,9 @@ Examples of conditional modifiers include:
 	\item A character fails an opposed roll against another character's intimidation, applying a -1 conditional modifier to all actions on their next turn due to shaken nerves.
 	\item A player thinks of an unexpected solution to a problem, granting a +2 conditional modifier to their attempt to execute the solution as a reward for player creativity.
 \end{itemize}
+
+Conditional modifiers should be used by the game master to encourage creative roleplaying and problem solving.
+There should always be some way for players to gain a conditional modifier, to encourage creative and interesting roleplaying.
 
 \subsection{Traits}
 \textbf{Traits} represent special or unusual ways a character uses their skills.
@@ -120,6 +124,7 @@ Healthy characters start at the normal level of their condition.
 As a character becomes progressively more injured or tired in a fight, their appropriate condition level is reduced and they incur negative conditional modifiers to all skill checks.
 If any condition is reduced to the lowest level, the character becomes unable to act.
 Characters can reverse a reduced condition level by finding in-game means of healing and rest.
+However, players can only raise their condition level once, and that becomes their new highest condition level until a longer rest such as resting overnight for fatigue or extended bedrest with medical care for health.
 
 The relative power tier of different characters is represented by the number of levels on their condition tracks.
 More powerful characters have more condition levels and are more difficult to defeat.
@@ -181,6 +186,8 @@ More powerful characters have more condition levels and are more difficult to de
 	\end{tabular}
 \end{center}
 
+When a character brings another character down to the lowest level of one of the two condition tracks, they can then immediately finish the target off, leaving them permanently dead (within the rules of the setting).  Characters may also leave the target dying or incapacitated to deal with later.  Characters in the dying state will eventually die permanently. The time this takes varies and can be extended by basic medical care.
+
 \subsection{Advantage}
 \textbf{Advantage} is a relationship between two characters in combat where one is in a temporary superior state to the other.
 Advantage is a one-way relationship; if a player gains advantage over a character, that character loses any advantage they had against that player.
@@ -210,7 +217,7 @@ An \textbf{action} is anything the character can do in approximately three secon
 This might include attacking with a weapon, casting a spell, moving through the environment, or manipulating an object.
 Actions are resolved with skill checks just as in non-combat situations.
 
-During their side's phase, each character may choose to perform at least up to two sequential actions.
+During their side's phase, each character may normally perform up to two actions in sequence.
 They may choose to take more actions by \textbf{multitasking} and/or \textbf{rushing}.
 Multitasking allows a character to perform two simultaneous actions in place of a single action.
 Multitasking applies a negative conditional modifier to both actions.
@@ -249,11 +256,11 @@ If the attack skill check succeeds, one of two results may occur.
 \end{itemize}
 
 When the difference between the attacker's attack skill check and the defender's defense skill check is greater than 10 in favor of either character, a \textbf{combat critical} occurs.
-The results of a combat critical are in addition to any normal results of the outcome.
 
 \begin{itemize}
-	\item If the combat critical is in favor of the attacker, they perform a \textbf{critical attack} and the defender goes down one more level on the condition track.
-	\item If the combat critical is in favor of the defender, they perform a \textbf{critical defense} and immediately gain advantage over the attacker.
+	\item If the combat critical is in favor of an attacker without advantage, they perform a \textbf{critical attack}, gaining advantage and taking the defender down one more level on the condition track.
+	\item If the combat critical is in favor of an attacker with advantage, they take the defender down two levels on the condition track.
+	\item If the combat critical is in favor of the defender, they perform a \textbf{critical defense} and immediately gain advantage over the attacker. If they already have advantage, they gain no special effect.
 \end{itemize}
 
 An attacker can choose to move up to 5 feet (one square or one hex) as part of their attack action.
