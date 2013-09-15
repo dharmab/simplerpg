@@ -213,7 +213,7 @@ If multiple sides start at the same time, the phase order can be decided by roll
 Players always win ties against non-player characters.
 
 \subsection{Actions}
-An \textbf{action} represents approximately three seconds in which a character can work towards a task. 
+An \textbf{action} represents approximately three seconds in which a character can work towards a task.
 Tasks are resolved with skill checks just as in non-combat situations.
 However, attempting a task in combat consumes a number of actions equal to the \textbf{complexity} of the task.\footnote{The complexity of a given task is defined by the setting rules and the game master.}
 For example, a task with a complexity of 1 consumes one action to attempt.
@@ -243,10 +243,10 @@ Both multitasking and rushing increase the consequences of failing an action.
 Multitasking and rushing can be combined, but the negative conditional modifiers stack at an increasing rate.
 
 \subsubsection{Movement}
-Characters can use a movement task to move through the battlefield.
+Characters can use a movement task to move through the battlefield. 
 
 \begin{center}
-	\textbf{Movement speeds} \\
+	\textbf{Typical human movement speeds} \\
 	\begin{tabular}{lccc}
 		Speed  & Feet & Squares & Hexes \\
 		\hline
@@ -264,47 +264,80 @@ For example, sprinting before lifting a heavy object might incur a negative cond
 Repeatedly sprinting might wear a character down, applying a negative conditional modifier on all their actions until they stop to rest.
 
 \subsubsection{Attacking and Defending}
-When a character attacks another character (whether it be with melee weapon, ranged weapon or magic-like ability) they use the associated attack skill to make an opposed skill check against their target.
-If possible, the target uses an appropriate defense skill to oppose.
+When a character attacks another character (whether it be with melee weapon, ranged weapon or magic-like ability) they use the associated attack skill to make an opposed a skill check against their target.
+The character initiating the attack is the \emph{attacker} and the character being attacked is the \emph{defender}.
+If the defender is wielding a weapon that has an associated defense skill, they roll an opposed skill check of that skill.
+Otherwise, the defender rolls a simple 2d6 in place of a defense skill check.
 
-If the attacker's attack skill check fails and the difference between the attacker's attack skill check and the defender's defense skill check is less than 10, the attacker fails to hit the target.
+If the attacker wins the opposed skill check by 10 or greater, a \textbf{flawless attack} occurs and a special effect may apply. If the defender wins the opposed skill check by 10 or greater, they perform a \textbf{flawless defense} and a special effect may apply. The special effect for a flawless attack or defense is applied before the normal effect of the attack.
 
-If the attacker's attack skill check succeeds and the difference between the attacker's attack skill check and the defender's defense skill check is less than 10, the attacker hits the target.
-
-The effect of the attack is different based on the weapon or ability being used.
+The resulting effect is based on three factors: Whether the attack skill check succeeds or fails, whether or not a flawless attack or defense occurs, and the type of the attack (melee, ranged, or other).
 
 \paragraph{Melee}
 
-The effect of a successful melee attack is governed by the Advantage system. 
+Melee attacks are performed by characters using melee weapons and can normally only be attempted against characters up to 5 feet away. A melee attacker can choose to move up to 5 feet as part of their attack action.
 
-\subparagraph{Advantage} is a relationship between two characters in melee combat where one is in a temporary superior state to the other.
+\subparagraph{Advantage}
+In order for the attack to effect the defender's condition, they first gain \textbf{advantage} over the defender. Advantage is a relationship between two characters in melee combat where one is in a temporary superior state to the other.
 Advantage is a one-way relationship; if a player gains advantage over a character, that character loses any advantage they had against that player.
 A character may gain advantage over another in one of three ways.
 
 \begin{itemize}
 	\item The character successfully attacked the other and the other has not successfully attacked the character since then.
 	\item At the start of their phase or action, the character is in a situation that grants advantage over the other (such as flanking the other or being on higher ground).
-	\item The character performs a critical defense, immediately granting advantage to the defending character.
+	\item The character performs a flawless defense in melee, immediately granting advantage to the defending character.
 \end{itemize}
 
-Advantage is a prerequisite condition for damaging an opponent in melee and is carried over between phases.
+Advantage is carried over between phases. Advantage resets when the characters move more than 15 feet away from each other. (i.e., neither character has advantage over the other).
 
-\subparagraph{Effects}
-\begin{itemize}
-	\item If the attacker does not already have advantage over the defender, they gain advantage.
-	\item If the attacker has advantage over the defender, the defender reduces their appropriate condition type by one level.
-\end{itemize}
+\subparagraph{Normal Effect}
+The effect of a melee attack is governed by whether the attack succeeds and whether the attacker has advantage over the defender.
+If the attacker does not already have advantage over the defender, they gain advantage.
+If the attacker has advantage over the defender, the defender reduces their appropriate condition type by one level.
+\begin{center}
+	\begin{tabular}{lll}
+		Attack Skill Check & Attacker Advantage & Effect                                              \\
+		\hline
+		Succeed            & No                 & Attacker gains advantage                            \\
+		Succeed            & Yes                & Defender reduces condition by one \\
+		Fail               & No                 & No effect                                           \\
+		Fail               & Yes                & No effect                                           \\
+	\end{tabular}
+\end{center}
 
-When the difference between the attacker's attack skill check and the defender's defense skill check is greater than 10 in favor of either character, a \textbf{melee combat critical} occurs.
+\subparagraph{Flawless Attack Effect}
+If the attacker does not already have advantage over the defender, the attacker gains advantage.
 
-\begin{itemize}
-	\item If the combat critical is in favor of an attacker that does not already have advantage over the defender, they perform a \textbf{critical attack} and the attacker gains advantage while the defender reduces their appropriate condition type by one level.
-	\item If the combat critical is in favor of an attacker that has advantage over the defender, they perform a \textbf{critical attack} and the defender reduces their appropriate condition type by two levels.
-	\item If the combat critical is in favor of a defender that does not already have advantage over the attacker, they perform a \textbf{critical defense} and do not reduce their condition immediately gain advantage over the attacker.
-	\item If the combat critical is in favor of a defender that has advantage over the attacker, they perform a \textbf{critical defense} but no effects occur.
-\end{itemize}
+If the attacker has advantage over the defender, the defender reduces their appropriate condition type by one levels.
 
-An attacker can choose to move up to 5 feet (one square or one hex) as part of their attack action.
+\subparagraph{Flawless Defense Effect}
+If the defender does not already have advantage over the attacker, they perform a flawless defense and immediately gain advantage over the attacker.
+
+If the defender has advantage over the attacker, they perform a flawless defense but no additional effects occur.
+
+\paragraph{Ranged}
+Ranged attacks are performed by attackers using ranged weapons and can normally be attempted against characters within line of sight and within the weapon's range.
+
+\subparagraph{Soft Cover}
+Ranged attacks are less likely to hit characters in \textbf{soft cover}.
+If an object partially or fully obscures a defender from an attacker, the defender is said to have soft cover from the attack and an appropriate negative conditional modifier is applied to the attacker.
+
+\subparagraph{Hard Cover}
+Ranged attacks can not hit characters in \textbf{hard cover}.
+If an object fully obscures a defender from an attacker and the cover is made of a material that the attacker's projectile can not penetrate, the defender is said to have hard cover from the the attack and the attack can never succeed.
+
+\subparagraph{Normal Effect}
+If a ranged attack succeeds, the defender reduces their appropriate condition type by one level.
+If a ranged attack fails, the defender does not reduce their appropriate condition type.
+
+\subparagraph{Flawless Attack Effect}
+The attacker performs a \textbf{flawless attack} and the defender reduces their appropriate condition type by two levels.
+
+\subparagraph{Flawless Defense Effect}
+The defender performs a flawless defense, but no additional effects occur.
+
+\paragraph{Magic/Tech}
+Rules for magical and technological attacks should be implemented by setting rules.
 
 \subsubsection{Prepared Actions}
 A character can choose to execute an action during another side's phase by declaring a \textbf{prepared action}.
