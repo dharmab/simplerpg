@@ -144,8 +144,8 @@ More powerful characters have more condition levels and are more difficult to de
 
 \newpage
 \begin{center}
-	\begin{tabular}{|c|ll|ll|}
-		\multicolumn{5}{c}{Condition Levels by Tier}                                                            \\
+	\textbf{Example of Health and Fatigue Condition Levels by Tier}
+	\begin{tabular}{cllll}                                  \\
 		\multicolumn{1}{c}{Tier} & \multicolumn{2}{c}{Health} & \multicolumn{2}{c}{Fatigue} \\
 		\hline
 		\multirow{8}{*}{Epic}
@@ -201,19 +201,6 @@ More powerful characters have more condition levels and are more difficult to de
 \end{center}
 \newpage
 
-\subsection{Advantage}
-\textbf{Advantage} is a relationship between two characters in combat where one is in a temporary superior state to the other.
-Advantage is a one-way relationship; if a player gains advantage over a character, that character loses any advantage they had against that player.
-A character may gain advantage over another in one of three ways.
-
-\begin{itemize}
-	\item The character successfully attacked the other and the other has not successfully attacked the character since then.
-	\item At the start of their phase or action, the character is in a situation that grants advantage over the other (such as flanking the other or being on higher ground).
-	\item The character performs a critical defense, immediately granting advantage to the defending character.
-\end{itemize}
-
-Advantage is a prerequisite condition for damaging an opponent and is carried over between phases.
-
 \subsection{Phase and Action Order}
 Combat is divided into \textbf{phases} during which all members of a side each perform \textbf{actions}.
 Typically, this means that all players perform their actions during the players' phase, then all enemy characters perform their actions during the enemy phase.
@@ -228,20 +215,25 @@ Players always win ties against non-player characters.
 \subsection{Actions}
 An \textbf{action} represents approximately three seconds in which a character can work towards a task. 
 Tasks are resolved with skill checks just as in non-combat situations.
-However, attempting a task in combat consumes a number of actions based on the complexity of the task.\footnote{The complexity of a given task is defined by the setting rules and the game master.}
+However, attempting a task in combat consumes a number of actions equal to the \textbf{complexity} of the task.\footnote{The complexity of a given task is defined by the setting rules and the game master.}
+For example, a task with a complexity of 1 consumes one action to attempt.
+A task with a complexity of 2 consumes two actions to attempt
+A task with a complexity of 0 consumes no actions to attempt (although the game master should enforce reasonable limits on how many 0-complexity actions can be attempted).
 During their side's phase, each character may normally perform up to two actions in sequence.
 
-\begin{description}
-	\item[Trivial tasks] are tasks that can be completed in under three seconds without any significant effort.
-	Trivial tasks do not consume any actions to attempt, and may not require a skill check.
-	This might include speaking briefly or dropping into a crouch or prone position.
-	\item[Normal tasks] are tasks that can be completed in under three seconds.
-	Normal tasks consume one action to attempt.
-	This might include attacking with a melee weapon, moving through the environment, or manipulating a object.
-	\item[Complex tasks] are tasks that can not be completed in under three seconds. 
-	Complex tasks consume two actions to attempt.
-	This might include attacking with a ranged weapon, casting a spell, or manipulating a complex object.
-\end{description}
+\begin{center}
+	\textbf{Examples of Task Complexity} \\
+	\begin{tabular}{lc}
+		Task                   & Complexity \\
+		\hline
+		Moving                 & 1          \\
+		Melee attack           & 1          \\
+		Ranged attack          & 2          \\
+		Magical attack         & 2          \\
+		Speaking shortly       & 0          \\
+		Dropping into a crouch & 0          \\
+	\end{tabular}
+\end{center}
 
 Characters may choose to take more than two actions during a phase by \textbf{multitasking} and/or \textbf{rushing}.
 Multitasking allows a character to perform two simultaneous actions in place of a single action.
@@ -251,9 +243,10 @@ Both multitasking and rushing increase the consequences of failing an action.
 Multitasking and rushing can be combined, but the negative conditional modifiers stack at an increasing rate.
 
 \subsubsection{Movement}
-The following table is a guideline of how far a character can move in a single action.
+Characters can use a movement task to move through the battlefield.
 
 \begin{center}
+	\textbf{Movement speeds} \\
 	\begin{tabular}{lccc}
 		Speed  & Feet & Squares & Hexes \\
 		\hline
@@ -267,23 +260,42 @@ This speeds listed in the table can be modified by traits or conditional modifie
 For example, a character carrying a heavy item may move more slowly, while a character who goes running every day may have a trait that allows them to move faster.
 
 Different movement speeds apply different conditional modifiers to skills used later in the phase at the game master's discretion.
-For example, sprinting before pushing a heavy object might incur a negative conditional modifier on the push action, while sprinting before jumping across a gap might grant a positive conditional modifier on the jump action.
+For example, sprinting before lifting a heavy object might incur a negative conditional modifier on the lift action, while sprinting before jumping across a gap might grant a positive conditional modifier on the jump action.
 Repeatedly sprinting might wear a character down, applying a negative conditional modifier on all their actions until they stop to rest.
 
 \subsubsection{Attacking and Defending}
 When a character attacks another character (whether it be with melee weapon, ranged weapon or magic-like ability) they use the associated attack skill to make an opposed skill check against their target.
-The target uses an appropriate defense skill to oppose.
+If possible, the target uses an appropriate defense skill to oppose.
 
 If the attacker's attack skill check fails and the difference between the attacker's attack skill check and the defender's defense skill check is less than 10, the attacker fails to hit the target.
 
 If the attacker's attack skill check succeeds and the difference between the attacker's attack skill check and the defender's defense skill check is less than 10, the attacker hits the target.
 
+The effect of the attack is different based on the weapon or ability being used.
+
+\paragraph{Melee}
+
+The effect of a successful melee attack is governed by the Advantage system. 
+
+\subparagraph{Advantage} is a relationship between two characters in melee combat where one is in a temporary superior state to the other.
+Advantage is a one-way relationship; if a player gains advantage over a character, that character loses any advantage they had against that player.
+A character may gain advantage over another in one of three ways.
+
+\begin{itemize}
+	\item The character successfully attacked the other and the other has not successfully attacked the character since then.
+	\item At the start of their phase or action, the character is in a situation that grants advantage over the other (such as flanking the other or being on higher ground).
+	\item The character performs a critical defense, immediately granting advantage to the defending character.
+\end{itemize}
+
+Advantage is a prerequisite condition for damaging an opponent in melee and is carried over between phases.
+
+\subparagraph{Effects}
 \begin{itemize}
 	\item If the attacker does not already have advantage over the defender, they gain advantage.
 	\item If the attacker has advantage over the defender, the defender reduces their appropriate condition type by one level.
 \end{itemize}
 
-When the difference between the attacker's attack skill check and the defender's defense skill check is greater than 10 in favor of either character, a \textbf{combat critical} occurs.
+When the difference between the attacker's attack skill check and the defender's defense skill check is greater than 10 in favor of either character, a \textbf{melee combat critical} occurs.
 
 \begin{itemize}
 	\item If the combat critical is in favor of an attacker that does not already have advantage over the defender, they perform a \textbf{critical attack} and the attacker gains advantage while the defender reduces their appropriate condition type by one level.
