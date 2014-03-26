@@ -25,10 +25,8 @@ div.article {
 }
 
 blockquote {
-	text-align: center;
+	text-align: justify;
 	font-style: italic;
-	border:solid 1px;
-	border-radius: 25px
 }
 
 li {
@@ -42,28 +40,33 @@ h1,h2,h3,h4,h5,h6,h7 {
 	margin-bottom: 0.5em;
 }
 
+h1 {
+	font-size: 28pt;
+}
+
 h2 {
-	font-size: 2em;
+	font-size: 28pt;
 }
 
 h3 {
-	font-size: 1.8em;
+	font-size: 24pt;
 }
 
 h4 {
-	font-size: 1.6em;
+	font-size: 20pt;
 }
 
 h5 {
-	font-size: 1.4em;
+	font-size: 16pt;
 }
 
 h6 {
-	font-size: 1.2em;
+	font-size: 12pt;
+
 }
 
 h7 {
-	font-size: 1.1em
+	font-size: 10pt;
 }
 
 table {
